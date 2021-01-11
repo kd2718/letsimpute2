@@ -66,5 +66,5 @@
 'render_galleries:output/galleries/index.html', (73216, 5261)
 'copy_assets:output/assets/js/justified-layout.min.js', (78848, 460)
 'render_sources:output/pages/about/index.md', (79360, 234)
-'render_pages:output/pages/about/index.html', (79872, 7127)
+'render_pages:output/pages/about/index.html', (79872, 7128)
 'render_posts:cache/pages/about.html', (87040, 342)

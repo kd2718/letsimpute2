@@ -38,7 +38,7 @@
 'copy_assets:output/assets/js/baguetteBox.min.js', (40960, 449)
 'render_taxonomies:output/categories/azure.xml', (41472, 638)
 'create_bundles:output/assets/css/all.css', (42496, 930)
-'sitemap:output/sitemap.xml', (43520, 2246)
+'sitemap:output/sitemap.xml', (43520, 2248)
 'robots_file', (46080, 56)
 'create_bundles:output/assets/js/all.js', (46592, 274)
 'render_taxonomies:output/rss.xml', (47104, 638)

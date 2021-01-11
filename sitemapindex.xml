@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+ <sitemap>
+  <loc>https://letsimpute.com/categories/airflow.xml</loc>
+  <lastmod>2021-01-11T06:44:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://letsimpute.com/categories/azure.xml</loc>
+  <lastmod>2021-01-11T06:44:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://letsimpute.com/categories/data-engineering.xml</loc>
+  <lastmod>2021-01-11T06:44:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://letsimpute.com/galleries/rss.xml</loc>
+  <lastmod>2021-01-11T06:44:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://letsimpute.com/rss.xml</loc>
+  <lastmod>2021-01-11T06:44:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://letsimpute.com/sitemap.xml</loc>
+  <lastmod>2021-01-11T06:44:00Z</lastmod>
+ </sitemap>
+</sitemapindex>

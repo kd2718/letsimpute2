@@ -1,0 +1,4 @@
+Sitemap: https://letsimpute.com/sitemapindex.xml
+
+User-Agent: *
+Host: letsimpute.com

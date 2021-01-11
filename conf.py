@@ -17,7 +17,7 @@ import time
 
 # Data about this site
 BLOG_AUTHOR = "koryd"  # (translatable)
-BLOG_TITLE = "lets impute"  # (translatable)
+BLOG_TITLE = "let's impute"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
 SITE_URL = "https://letsimpute.com/"
@@ -677,7 +677,7 @@ REDIRECTIONS = []
 # https://getnikola.com/handbook.html#deploying-to-github
 # You will need to configure the deployment branch on GitHub.
 GITHUB_SOURCE_BRANCH = 'src'
-GITHUB_DEPLOY_BRANCH = 'master'
+GITHUB_DEPLOY_BRANCH = 'main'
 
 # The name of the remote where you wish to push to, using github_deploy.
 GITHUB_REMOTE_NAME = 'origin'

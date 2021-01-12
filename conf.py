@@ -142,7 +142,7 @@ NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ("/archive.html", "Archive"),
         ("/categories/", "Tags"),
-        ("pages/about/", "About"),
+        ("/pages/about/", "About Me"),
         ("/rss.xml", "RSS feed"),
     ),
 }
@@ -239,7 +239,7 @@ POSTS = (
     ("posts/*.md", "posts", "post.tmpl"),
     ("posts/*.txt", "posts", "post.tmpl"),
     ("posts/*.html", "posts", "post.tmpl"),
-    ("posts/*ipynb", "posts", "post.tmpl")
+    ("posts/*.ipynb", "posts", "post.tmpl")
 )
 PAGES = (
     ("pages/*.rst", "pages", "page.tmpl"),

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>let's impute (Posts about python)</title><link>https://letsimpute.com/</link><description></description><atom:link href="https://letsimpute.com/categories/python.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:koryd2718@gmail.com"&gt;koryd&lt;/a&gt; </copyright><lastBuildDate>Wed, 13 Jan 2021 01:11:02 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Pandas Row Offsets</title><link>https://letsimpute.com/posts/pandas-row-offsets/</link><dc:creator>koryd</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>let's impute (Posts about python)</title><link>https://letsimpute.com/</link><description></description><atom:link href="https://letsimpute.com/categories/python.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2021 &lt;a href="mailto:koryd2718@gmail.com"&gt;koryd&lt;/a&gt; </copyright><lastBuildDate>Sat, 16 Jan 2021 06:14:23 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Pandas Row Offsets</title><link>https://letsimpute.com/posts/pandas-row-offsets/</link><dc:creator>koryd</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h3 id="Intro"&gt;Intro&lt;a class="anchor-link" href="https://letsimpute.com/posts/pandas-row-offsets/#Intro"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;My friend is learning how to program with pandas. Durring the pandemic, he runs classes online and the output is in and out times for the students. Some have connection issues that make them clock in and out a lot, but they are still in class most of the time. Other students skip class altogether. Can we use pandas to figure out how long each student was in class?&lt;/p&gt;
@@ -9,7 +9,7 @@
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [2]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [1]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pd&lt;/span&gt;
@@ -31,7 +31,7 @@
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [3]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [2]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;student_log&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DataFrame&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;columns&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'student_id'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'timestamp'&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
@@ -54,4 +54,4 @@
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;&lt;a href="https://letsimpute.com/posts/pandas-row-offsets/"&gt;Read more…&lt;/a&gt; (3 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>pandas</category><category>python</category><guid>https://letsimpute.com/posts/pandas-row-offsets/</guid><pubDate>Tue, 12 Jan 2021 05:29:37 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="https://letsimpute.com/posts/pandas-row-offsets/"&gt;Read more…&lt;/a&gt; (4 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>pandas</category><category>python</category><guid>https://letsimpute.com/posts/pandas-row-offsets/</guid><pubDate>Tue, 12 Jan 2021 05:29:37 GMT</pubDate></item></channel></rss>

@@ -120,7 +120,7 @@
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [2]:</div>
+<div class="prompt input_prompt">In [1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -146,7 +146,7 @@
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [3]:</div>
+<div class="prompt input_prompt">In [2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">student_log</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'student_id'</span><span class="p">,</span> <span class="s1">'timestamp'</span><span class="p">])</span>
@@ -177,10 +177,178 @@
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [4]:</div>
+<div class="prompt input_prompt">In [3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">student_log</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[3]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead><tr style="text-align: right;">
+<th></th>
+      <th>student_id</th>
+      <th>timestamp</th>
+    </tr></thead>
+<tbody>
+<tr>
+<th>0</th>
+      <td>0</td>
+      <td>16.304589</td>
+    </tr>
+<tr>
+<th>1</th>
+      <td>2</td>
+      <td>29.953800</td>
+    </tr>
+<tr>
+<th>2</th>
+      <td>2</td>
+      <td>17.304851</td>
+    </tr>
+<tr>
+<th>3</th>
+      <td>1</td>
+      <td>25.151845</td>
+    </tr>
+<tr>
+<th>4</th>
+      <td>0</td>
+      <td>19.970583</td>
+    </tr>
+<tr>
+<th>5</th>
+      <td>0</td>
+      <td>9.599590</td>
+    </tr>
+<tr>
+<th>6</th>
+      <td>0</td>
+      <td>28.629028</td>
+    </tr>
+<tr>
+<th>7</th>
+      <td>2</td>
+      <td>16.248891</td>
+    </tr>
+<tr>
+<th>8</th>
+      <td>2</td>
+      <td>9.836785</td>
+    </tr>
+<tr>
+<th>9</th>
+      <td>2</td>
+      <td>14.812535</td>
+    </tr>
+<tr>
+<th>10</th>
+      <td>2</td>
+      <td>13.742524</td>
+    </tr>
+<tr>
+<th>11</th>
+      <td>1</td>
+      <td>25.736422</td>
+    </tr>
+<tr>
+<th>12</th>
+      <td>2</td>
+      <td>20.894870</td>
+    </tr>
+<tr>
+<th>13</th>
+      <td>0</td>
+      <td>13.332287</td>
+    </tr>
+<tr>
+<th>14</th>
+      <td>2</td>
+      <td>33.234914</td>
+    </tr>
+<tr>
+<th>15</th>
+      <td>0</td>
+      <td>18.955793</td>
+    </tr>
+<tr>
+<th>16</th>
+      <td>2</td>
+      <td>20.544971</td>
+    </tr>
+<tr>
+<th>17</th>
+      <td>3</td>
+      <td>23.922631</td>
+    </tr>
+<tr>
+<th>18</th>
+      <td>2</td>
+      <td>29.027783</td>
+    </tr>
+<tr>
+<th>19</th>
+      <td>3</td>
+      <td>12.113769</td>
+    </tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Data-Clean">Data Clean<a class="anchor-link" href="#Data-Clean">¶</a>
+</h3>
+<p>Now that we have the data, we should get it in the proper order. I am going to sort by <code>student_id</code> then by <code>timestamp</code>. Then we can calcualte how long each student was in class.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">student_log</span> <span class="o">=</span> <span class="n">student_log</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s1">'student_id'</span><span class="p">,</span> <span class="s1">'timestamp'</span><span class="p">])</span>
+<span class="n">student_log</span>
 </pre></div>
 
     </div>
@@ -220,114 +388,104 @@
     </tr></thead>
 <tbody>
 <tr>
-<th>0</th>
-      <td>1</td>
-      <td>26.707855</td>
-    </tr>
-<tr>
-<th>1</th>
-      <td>2</td>
-      <td>17.490896</td>
-    </tr>
-<tr>
-<th>2</th>
-      <td>2</td>
-      <td>7.517338</td>
-    </tr>
-<tr>
-<th>3</th>
-      <td>0</td>
-      <td>9.278458</td>
-    </tr>
-<tr>
-<th>4</th>
-      <td>0</td>
-      <td>11.517678</td>
-    </tr>
-<tr>
 <th>5</th>
       <td>0</td>
-      <td>1.804287</td>
-    </tr>
-<tr>
-<th>6</th>
-      <td>0</td>
-      <td>29.014598</td>
-    </tr>
-<tr>
-<th>7</th>
-      <td>1</td>
-      <td>23.594506</td>
-    </tr>
-<tr>
-<th>8</th>
-      <td>0</td>
-      <td>1.801327</td>
-    </tr>
-<tr>
-<th>9</th>
-      <td>0</td>
-      <td>13.595199</td>
-    </tr>
-<tr>
-<th>10</th>
-      <td>2</td>
-      <td>8.419194</td>
-    </tr>
-<tr>
-<th>11</th>
-      <td>3</td>
-      <td>27.708571</td>
-    </tr>
-<tr>
-<th>12</th>
-      <td>2</td>
-      <td>20.950225</td>
+      <td>9.599590</td>
     </tr>
 <tr>
 <th>13</th>
       <td>0</td>
-      <td>20.954802</td>
+      <td>13.332287</td>
     </tr>
 <tr>
-<th>14</th>
-      <td>3</td>
-      <td>26.412066</td>
+<th>0</th>
+      <td>0</td>
+      <td>16.304589</td>
     </tr>
 <tr>
 <th>15</th>
+      <td>0</td>
+      <td>18.955793</td>
+    </tr>
+<tr>
+<th>4</th>
+      <td>0</td>
+      <td>19.970583</td>
+    </tr>
+<tr>
+<th>6</th>
+      <td>0</td>
+      <td>28.629028</td>
+    </tr>
+<tr>
+<th>3</th>
+      <td>1</td>
+      <td>25.151845</td>
+    </tr>
+<tr>
+<th>11</th>
+      <td>1</td>
+      <td>25.736422</td>
+    </tr>
+<tr>
+<th>8</th>
       <td>2</td>
-      <td>21.743201</td>
+      <td>9.836785</td>
+    </tr>
+<tr>
+<th>10</th>
+      <td>2</td>
+      <td>13.742524</td>
+    </tr>
+<tr>
+<th>9</th>
+      <td>2</td>
+      <td>14.812535</td>
+    </tr>
+<tr>
+<th>7</th>
+      <td>2</td>
+      <td>16.248891</td>
+    </tr>
+<tr>
+<th>2</th>
+      <td>2</td>
+      <td>17.304851</td>
     </tr>
 <tr>
 <th>16</th>
       <td>2</td>
-      <td>12.209184</td>
+      <td>20.544971</td>
     </tr>
 <tr>
-<th>17</th>
-      <td>0</td>
-      <td>12.619402</td>
+<th>12</th>
+      <td>2</td>
+      <td>20.894870</td>
     </tr>
 <tr>
 <th>18</th>
       <td>2</td>
-      <td>34.962153</td>
+      <td>29.027783</td>
+    </tr>
+<tr>
+<th>1</th>
+      <td>2</td>
+      <td>29.953800</td>
+    </tr>
+<tr>
+<th>14</th>
+      <td>2</td>
+      <td>33.234914</td>
     </tr>
 <tr>
 <th>19</th>
-      <td>2</td>
-      <td>3.247662</td>
+      <td>3</td>
+      <td>12.113769</td>
     </tr>
 <tr>
-<th>20</th>
+<th>17</th>
       <td>3</td>
-      <td>7.044671</td>
-    </tr>
-<tr>
-<th>21</th>
-      <td>3</td>
-      <td>8.252543</td>
+      <td>23.922631</td>
     </tr>
 </tbody>
 </table>
@@ -345,9 +503,19 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Data-Clean">Data Clean<a class="anchor-link" href="#Data-Clean">¶</a>
+<p>The index is out of order, but that is OK. You can reset the index if needed but we are going to ignore it for now.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Aggrigate-the-data">Aggrigate the data<a class="anchor-link" href="#Aggrigate-the-data">¶</a>
 </h3>
-<p>Now that we have the data, we should get it in the proper order. I am going to sort by <code>student_id</code> then by <code>timestamp</code>. Then we can calcualte how long each student was in class.</p>
+<p>Now we can see how to figure out how long each student was in class for. We need to diff the rows so that we find out how long each student was clocked in for each session.</p>
 
 </div>
 </div>
@@ -357,8 +525,7 @@
 <div class="prompt input_prompt">In [5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">student_log</span> <span class="o">=</span> <span class="n">student_log</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s1">'student_id'</span><span class="p">,</span> <span class="s1">'timestamp'</span><span class="p">])</span>
-<span class="n">student_log</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">student_log</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -398,241 +565,54 @@
     </tr></thead>
 <tbody>
 <tr>
-<th>8</th>
-      <td>0</td>
-      <td>1.801327</td>
-    </tr>
-<tr>
 <th>5</th>
-      <td>0</td>
-      <td>1.804287</td>
-    </tr>
-<tr>
-<th>3</th>
-      <td>0</td>
-      <td>9.278458</td>
-    </tr>
-<tr>
-<th>4</th>
-      <td>0</td>
-      <td>11.517678</td>
-    </tr>
-<tr>
-<th>17</th>
-      <td>0</td>
-      <td>12.619402</td>
-    </tr>
-<tr>
-<th>9</th>
-      <td>0</td>
-      <td>13.595199</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
 <tr>
 <th>13</th>
       <td>0</td>
-      <td>20.954802</td>
-    </tr>
-<tr>
-<th>6</th>
-      <td>0</td>
-      <td>29.014598</td>
-    </tr>
-<tr>
-<th>7</th>
-      <td>1</td>
-      <td>23.594506</td>
+      <td>3.732698</td>
     </tr>
 <tr>
 <th>0</th>
-      <td>1</td>
-      <td>26.707855</td>
-    </tr>
-<tr>
-<th>19</th>
-      <td>2</td>
-      <td>3.247662</td>
-    </tr>
-<tr>
-<th>2</th>
-      <td>2</td>
-      <td>7.517338</td>
-    </tr>
-<tr>
-<th>10</th>
-      <td>2</td>
-      <td>8.419194</td>
-    </tr>
-<tr>
-<th>16</th>
-      <td>2</td>
-      <td>12.209184</td>
-    </tr>
-<tr>
-<th>1</th>
-      <td>2</td>
-      <td>17.490896</td>
-    </tr>
-<tr>
-<th>12</th>
-      <td>2</td>
-      <td>20.950225</td>
+      <td>0</td>
+      <td>2.972302</td>
     </tr>
 <tr>
 <th>15</th>
-      <td>2</td>
-      <td>21.743201</td>
-    </tr>
-<tr>
-<th>18</th>
-      <td>2</td>
-      <td>34.962153</td>
-    </tr>
-<tr>
-<th>20</th>
-      <td>3</td>
-      <td>7.044671</td>
-    </tr>
-<tr>
-<th>21</th>
-      <td>3</td>
-      <td>8.252543</td>
-    </tr>
-<tr>
-<th>14</th>
-      <td>3</td>
-      <td>26.412066</td>
-    </tr>
-<tr>
-<th>11</th>
-      <td>3</td>
-      <td>27.708571</td>
-    </tr>
-</tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The index is out of order, but that is OK. You can reset the index if needed but we are going to ignore it for now.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Aggrigate-the-data">Aggrigate the data<a class="anchor-link" href="#Aggrigate-the-data">¶</a>
-</h3>
-<p>Now we can see how to figure out how long each student was in class for. We need to diff the rows so that we find out how long each student was clocked in for each session.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [6]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">student_log</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[6]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-<thead><tr style="text-align: right;">
-<th></th>
-      <th>student_id</th>
-      <th>timestamp</th>
-    </tr></thead>
-<tbody>
-<tr>
-<th>8</th>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-<tr>
-<th>5</th>
       <td>0</td>
-      <td>0.002960</td>
-    </tr>
-<tr>
-<th>3</th>
-      <td>0</td>
-      <td>7.474172</td>
+      <td>2.651204</td>
     </tr>
 <tr>
 <th>4</th>
       <td>0</td>
-      <td>2.239220</td>
-    </tr>
-<tr>
-<th>17</th>
-      <td>0</td>
-      <td>1.101724</td>
-    </tr>
-<tr>
-<th>9</th>
-      <td>0</td>
-      <td>0.975797</td>
-    </tr>
-<tr>
-<th>13</th>
-      <td>0</td>
-      <td>7.359603</td>
+      <td>1.014790</td>
     </tr>
 <tr>
 <th>6</th>
       <td>0</td>
-      <td>8.059797</td>
+      <td>8.658445</td>
     </tr>
 <tr>
-<th>7</th>
+<th>3</th>
       <td>1</td>
-      <td>-5.420092</td>
+      <td>-3.477183</td>
     </tr>
 <tr>
-<th>0</th>
+<th>11</th>
       <td>0</td>
-      <td>3.113348</td>
+      <td>0.584577</td>
+    </tr>
+<tr>
+<th>8</th>
+      <td>1</td>
+      <td>-15.899637</td>
+    </tr>
+<tr>
+<th>10</th>
+      <td>0</td>
+      <td>3.905739</td>
     </tr>
 </tbody>
 </table>
@@ -657,7 +637,7 @@
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [7]:</div>
+<div class="prompt input_prompt">In [6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">student_log</span><span class="p">[</span><span class="s1">'diff'</span><span class="p">]</span> <span class="o">=</span> <span class="n">student_log</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'student_id'</span><span class="p">)</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">periods</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -674,7 +654,7 @@
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[7]:</div>
+    <div class="prompt output_prompt">Out[6]:</div>
 
 
 
@@ -709,23 +689,23 @@
 <tbody>
 <tr>
 <th>0</th>
-      <td>100.585752</td>
-      <td>27.213271</td>
+      <td>106.791871</td>
+      <td>19.029438</td>
     </tr>
 <tr>
 <th>1</th>
-      <td>50.302361</td>
-      <td>3.113348</td>
+      <td>50.888266</td>
+      <td>0.584577</td>
     </tr>
 <tr>
 <th>2</th>
-      <td>126.539852</td>
-      <td>31.714492</td>
+      <td>205.601924</td>
+      <td>23.398129</td>
     </tr>
 <tr>
 <th>3</th>
-      <td>69.417850</td>
-      <td>20.663900</td>
+      <td>36.036400</td>
+      <td>11.808863</td>
     </tr>
 </tbody>
 </table>
@@ -738,13 +718,57 @@
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>So what we are doing here is <code>grouping by</code> the <code>student_id</code>, then summing. This is like saying:</p>
+<blockquote>
+<p>For each student, sum the differences.</p>
+</blockquote>
+<p>However, this is still wrong! We are summing All rows, when we should be summing every other row! This may be easier if we add <code>in</code> and <code>out</code> tags.</p>
+<p>First we need to make a new column called <code>action</code> and we will give every row a value of <code>In</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Make new column called action, assign every value 'In'</span>
+<span class="n">student_log</span><span class="p">[</span><span class="s1">'action'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'In'</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Next we need to give every other row a value <code>Out</code>. I an going to use <code>.iloc</code> for this setp. <code>iloc</code> goes through the dataframe from top to bottom.
+The slice command I give tells pandas to start at row 2 (id as 1 because 0 index) and skip every other row.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># or simply</span>
-<span class="n">student_log</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'student_id'</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'diff'</span><span class="p">)[</span><span class="s1">'diff'</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Switch every other column to say 'Out'. </span>
+<span class="c1"># iloc ignores indexes and goes through the dataframe in order from top to bottom.</span>
+<span class="n">student_log</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'Out'</span>
+
+<span class="c1"># print results</span>
+<span class="n">student_log</span>
 </pre></div>
 
     </div>
@@ -761,13 +785,304 @@
 
 
 
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead><tr style="text-align: right;">
+<th></th>
+      <th>student_id</th>
+      <th>timestamp</th>
+      <th>diff</th>
+      <th>action</th>
+    </tr></thead>
+<tbody>
+<tr>
+<th>5</th>
+      <td>0</td>
+      <td>9.599590</td>
+      <td>NaN</td>
+      <td>In</td>
+    </tr>
+<tr>
+<th>13</th>
+      <td>0</td>
+      <td>13.332287</td>
+      <td>3.732698</td>
+      <td>Out</td>
+    </tr>
+<tr>
+<th>0</th>
+      <td>0</td>
+      <td>16.304589</td>
+      <td>2.972302</td>
+      <td>In</td>
+    </tr>
+<tr>
+<th>15</th>
+      <td>0</td>
+      <td>18.955793</td>
+      <td>2.651204</td>
+      <td>Out</td>
+    </tr>
+<tr>
+<th>4</th>
+      <td>0</td>
+      <td>19.970583</td>
+      <td>1.014790</td>
+      <td>In</td>
+    </tr>
+<tr>
+<th>6</th>
+      <td>0</td>
+      <td>28.629028</td>
+      <td>8.658445</td>
+      <td>Out</td>
+    </tr>
+<tr>
+<th>3</th>
+      <td>1</td>
+      <td>25.151845</td>
+      <td>NaN</td>
+      <td>In</td>
+    </tr>
+<tr>
+<th>11</th>
+      <td>1</td>
+      <td>25.736422</td>
+      <td>0.584577</td>
+      <td>Out</td>
+    </tr>
+<tr>
+<th>8</th>
+      <td>2</td>
+      <td>9.836785</td>
+      <td>NaN</td>
+      <td>In</td>
+    </tr>
+<tr>
+<th>10</th>
+      <td>2</td>
+      <td>13.742524</td>
+      <td>3.905739</td>
+      <td>Out</td>
+    </tr>
+<tr>
+<th>9</th>
+      <td>2</td>
+      <td>14.812535</td>
+      <td>1.070011</td>
+      <td>In</td>
+    </tr>
+<tr>
+<th>7</th>
+      <td>2</td>
+      <td>16.248891</td>
+      <td>1.436355</td>
+      <td>Out</td>
+    </tr>
+<tr>
+<th>2</th>
+      <td>2</td>
+      <td>17.304851</td>
+      <td>1.055961</td>
+      <td>In</td>
+    </tr>
+<tr>
+<th>16</th>
+      <td>2</td>
+      <td>20.544971</td>
+      <td>3.240120</td>
+      <td>Out</td>
+    </tr>
+<tr>
+<th>12</th>
+      <td>2</td>
+      <td>20.894870</td>
+      <td>0.349898</td>
+      <td>In</td>
+    </tr>
+<tr>
+<th>18</th>
+      <td>2</td>
+      <td>29.027783</td>
+      <td>8.132913</td>
+      <td>Out</td>
+    </tr>
+<tr>
+<th>1</th>
+      <td>2</td>
+      <td>29.953800</td>
+      <td>0.926017</td>
+      <td>In</td>
+    </tr>
+<tr>
+<th>14</th>
+      <td>2</td>
+      <td>33.234914</td>
+      <td>3.281114</td>
+      <td>Out</td>
+    </tr>
+<tr>
+<th>19</th>
+      <td>3</td>
+      <td>12.113769</td>
+      <td>NaN</td>
+      <td>In</td>
+    </tr>
+<tr>
+<th>17</th>
+      <td>3</td>
+      <td>23.922631</td>
+      <td>11.808863</td>
+      <td>Out</td>
+    </tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>So the sum of the time in class should be the sum of the <code>Out</code> rows for each students. To get this we can either use <code>iloc</code> again, or we can use filtering.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># filter rows that are Out rows and sum the differences here only</span>
+<span class="n">student_log</span><span class="p">[</span><span class="n">student_log</span><span class="p">[</span><span class="s1">'action'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'Out'</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'student_id'</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'diff'</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[9]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+      <th>timestamp</th>
+      <th>diff</th>
+    </tr>
+<tr>
+<th>student_id</th>
+      <th></th>
+      <th></th>
+    </tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+      <td>60.917109</td>
+      <td>15.042346</td>
+    </tr>
+<tr>
+<th>1</th>
+      <td>25.736422</td>
+      <td>0.584577</td>
+    </tr>
+<tr>
+<th>2</th>
+      <td>112.799083</td>
+      <td>19.996242</td>
+    </tr>
+<tr>
+<th>3</th>
+      <td>23.922631</td>
+      <td>11.808863</td>
+    </tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># or simply</span>
+<span class="n">student_log</span><span class="p">[</span><span class="n">student_log</span><span class="p">[</span><span class="s1">'action'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'Out'</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'student_id'</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">'diff'</span><span class="p">)[</span><span class="s1">'diff'</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[10]:</div>
+
+
+
 
 <div class="output_text output_subarea output_execute_result">
 <pre>student_id
-0    27.213271
-1     3.113348
-2    31.714492
-3    20.663900
+0    15.042346
+1     0.584577
+2    19.996242
+3    11.808863
 Name: diff, dtype: float64</pre>
 </div>
 
@@ -776,6 +1091,20 @@ Name: diff, dtype: float64</pre>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Perfect!</p>
+<p>This is the same as saying:</p>
+<blockquote>
+<p>For each student, sum the difference of the out rows</p>
+</blockquote>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">

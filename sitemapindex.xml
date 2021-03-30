@@ -14,27 +14,35 @@
   <lastmod>2021-01-11T06:44:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://letsimpute.com/categories/cat_cicd.xml</loc>
+  <lastmod>2021-03-28T15:00:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://letsimpute.com/categories/cat_pandas.xml</loc>
-  <lastmod>2021-01-13T01:11:00Z</lastmod>
+  <lastmod>2021-01-16T06:14:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://letsimpute.com/categories/data-engineering.xml</loc>
   <lastmod>2021-01-11T06:44:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://letsimpute.com/categories/docker.xml</loc>
+  <lastmod>2021-03-28T15:00:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://letsimpute.com/categories/pandas.xml</loc>
-  <lastmod>2021-01-13T01:11:00Z</lastmod>
+  <lastmod>2021-01-16T06:14:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://letsimpute.com/categories/python.xml</loc>
-  <lastmod>2021-01-13T01:11:00Z</lastmod>
+  <lastmod>2021-01-16T06:14:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://letsimpute.com/rss.xml</loc>
-  <lastmod>2021-01-13T01:11:00Z</lastmod>
+  <lastmod>2021-03-28T15:00:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://letsimpute.com/sitemap.xml</loc>
-  <lastmod>2021-01-13T01:11:00Z</lastmod>
+  <lastmod>2021-03-28T15:00:00Z</lastmod>
  </sitemap>
 </sitemapindex>

@@ -137,12 +137,20 @@ docker: Error response from daemon: OCI runtime create failed: container_linux.g
 ERRO<span class="o">[</span><span class="m">0000</span><span class="o">]</span> error waiting <span class="k">for</span> container: context canceled 
 </code></pre>
 
-<p>After a lot of fiddeling around and reading the docks I realized I was really close on my second try. the <code>entrypoint</code> option needs to be set to bash. This tells the container what to run. Next I can use <code>-c</code> to pass in the command. This tells the container what arguments to give the entrypoint.</p>
+<p>After a lot of fiddeling around and reading the docs I realized I was really close on my second try. the <code>entrypoint</code> option needs to be set to bash. This tells the container what to run. Next I can use <code>-c</code> to pass in the command. This tells the container what arguments to give the entrypoint.</p>
 <pre class="code literal-block"><span></span><code>$ docker run --entrypoint bash -it registry.gitlab.com/koryd2718/airflow2_demo:latest -c <span class="s2">"pip freeze"</span> &gt; af2_requirements.txt
 </code></pre>
 
 <p>This finally dumps the requirements list with pinned package versions so I can duplicate this later.</p>
 <h3>Conclusion</h3>
+<ul>
+<li>
+<p>If you are updating an existing Docker Container, don't re-invent the wheel. Add just what you need.</p>
+</li>
+<li>
+<p>You can quickly pass information from docker to the host by taking advantage of <code>--entrypoint</code> and <code>-c</code> options while using <code>docker run</code>.</p>
+</li>
+</ul>
 <p>Docker had a lot to figure out. Although I had used docker many time in the past, I had not tried to customize my own container like this before. You can add just what you need to a container in a Dockerfile without needing to re-invent the wheel. Use <code>entrypoint</code> and the <code>-c</code> command to tell your docker what to run. Don't forget to use <code>-it</code> to create an interactive terminal.</p>
 <p>Before I go, you may have noticed the <code>gitlab</code> registry appended to my container names. I have been experimenting with <a href="https://gitlab.com/">gitlab</a> and they have a lot of great stuff. I hope to write about it in my next blog and share with you how to automate building and saving your containers to gitlab.</p>
 </div>

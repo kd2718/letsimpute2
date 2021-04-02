@@ -61,7 +61,7 @@ ERRO[0000] error waiting for container: context canceled
 
 ```
 
-After a lot of fiddeling around and reading the docks I realized I was really close on my second try. the `entrypoint` option needs to be set to bash. This tells the container what to run. Next I can use `-c` to pass in the command. This tells the container what arguments to give the entrypoint.
+After a lot of fiddeling around and reading the docs I realized I was really close on my second try. the `entrypoint` option needs to be set to bash. This tells the container what to run. Next I can use `-c` to pass in the command. This tells the container what arguments to give the entrypoint.
 
 ```shell
 $ docker run --entrypoint bash -it registry.gitlab.com/koryd2718/airflow2_demo:latest -c "pip freeze" > af2_requirements.txt
@@ -70,6 +70,10 @@ $ docker run --entrypoint bash -it registry.gitlab.com/koryd2718/airflow2_demo:l
 This finally dumps the requirements list with pinned package versions so I can duplicate this later.
 
 ## Conclusion
+
+* If you are updating an existing Docker Container, don't re-invent the wheel. Add just what you need.
+
+* You can quickly pass information from docker to the host by taking advantage of `--entrypoint` and `-c` options while using `docker run`.
 
 Docker had a lot to figure out. Although I had used docker many time in the past, I had not tried to customize my own container like this before. You can add just what you need to a container in a Dockerfile without needing to re-invent the wheel. Use `entrypoint` and the `-c` command to tell your docker what to run. Don't forget to use `-it` to create an interactive terminal.
 

@@ -72,13 +72,8 @@ Notice the `only` section. This prevents gitlab from running our pipeline every 
 
 ## Conclusion
 
-* Gitlab has some great features[^1].
+* Gitlab has some great features.
 * Use [Gitlab docs](https://docs.gitlab.com/ee/ci/) to setup a pipeline that builds your images.
-* Find your new container on the sidebar under `Packages & Registries` > `Container Registries`.
+* Find your new container on the sidebar under `Packages & Registries` -> `Container Registries`.
 
 I was very happy no having it wait hours to push a smallish container back up. Gitlab lets me build my container on their site and cuts the time considerable. The runners are not the most powerful machines, so try to optimize your build on your local computer. All the code for this example can be found here: https://gitlab.com/koryd2718/docker-pipeline-tutorial
-
-
-  
-  
- [^1]: Github does offer similar features but I loved the documentation of Gitlab.

@@ -15,6 +15,9 @@ Docker containers are great. Building a container to meet your needs and require
 
 The only competitive ISP in my area gives me a decent 200 Mbps down and 5 Mbps up. **5**!!!! It takes __hours__ to send larger files to google drive. Although it can be a headache, I feel the pain most when I am working on docker containers.
 
+
+<!-- TEASER_END -->
+
 ## Heavy Containers
 
 I am no docker expert, but my containers seem to be somewhat on the large side. I think there are a lot of things I could be doing better to help with size, but in the meantime I am stuck with my nearly 2GB file. So with my 5 Mbps up that is about 50 minutes to send 1 file. This is insane. I thought there had to be a better way.
@@ -59,4 +62,23 @@ build:
     - docker push $IMAGE_TAG
 ```
 
-This file tells gitlab to use the docker:19.03.12 runner and to build our container then push it to 
+This file tells gitlab to use the docker:19.03.12 runner. This runner will run the commands in the `script` section. If it wasn't clear, this section will do the following:
+
+* Login to gitlab container registry.
+* build our docker image with a tag specified in the `variables` section.
+* push the image to our docker registry.
+
+Notice the `only` section. This prevents gitlab from running our pipeline every time we have a change. In the current configuration, this will only run on the `master` branch when it sees the `Dockerfile` has changed.
+
+## Conclusion
+
+* Gitlab has some great features[^1].
+* Use [Gitlab docs](https://docs.gitlab.com/ee/ci/) to setup a pipeline that builds your images.
+* Find your new container on the sidebar under `Packages & Registries` > `Container Registries`.
+
+I was very happy no having it wait hours to push a smallish container back up. Gitlab lets me build my container on their site and cuts the time considerable. The runners are not the most powerful machines, so try to optimize your build on your local computer. All the code for this example can be found here: https://gitlab.com/koryd2718/docker-pipeline-tutorial
+
+
+  
+  
+ [^1]: Github does offer similar features but I loved the documentation of Gitlab.

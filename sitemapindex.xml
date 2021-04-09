@@ -14,8 +14,12 @@
   <lastmod>2021-01-11T06:44:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://letsimpute.com/categories/cat_cicd-docker.xml</loc>
+  <lastmod>2021-04-09T05:19:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://letsimpute.com/categories/cat_cicd.xml</loc>
-  <lastmod>2021-03-28T15:00:00Z</lastmod>
+  <lastmod>2021-04-09T05:19:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://letsimpute.com/categories/cat_pandas.xml</loc>
@@ -27,7 +31,11 @@
  </sitemap>
  <sitemap>
   <loc>https://letsimpute.com/categories/docker.xml</loc>
-  <lastmod>2021-03-28T15:00:00Z</lastmod>
+  <lastmod>2021-04-09T05:19:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://letsimpute.com/categories/gitlab.xml</loc>
+  <lastmod>2021-04-09T05:19:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://letsimpute.com/categories/pandas.xml</loc>
@@ -39,10 +47,10 @@
  </sitemap>
  <sitemap>
   <loc>https://letsimpute.com/rss.xml</loc>
-  <lastmod>2021-03-28T15:00:00Z</lastmod>
+  <lastmod>2021-04-09T05:19:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://letsimpute.com/sitemap.xml</loc>
-  <lastmod>2021-03-28T15:00:00Z</lastmod>
+  <lastmod>2021-04-09T05:19:00Z</lastmod>
  </sitemap>
 </sitemapindex>

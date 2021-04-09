@@ -3,7 +3,7 @@
 .. slug: setting-up-my-project-docker
 .. date: 2021-03-27 21:46:45 UTC-07:00
 .. tags: Docker
-.. category: CICD
+.. category: CICD, Docker
 .. link: 
 .. description: I try to make docker easy
 .. type: text

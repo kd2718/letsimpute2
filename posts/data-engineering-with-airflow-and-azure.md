@@ -3,7 +3,7 @@
 .. slug: data-engineering-with-airflow-and-azure
 .. date: 2021-01-10 10:06:32 UTC-08:00
 .. tags: airflow, azure, data engineering
-.. category: 
+.. category: Azure-Airflow
 .. link: 
 .. description: 
 .. type: airflow
